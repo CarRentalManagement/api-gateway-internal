@@ -1,0 +1,14 @@
+version: "3"
+services:
+  api-gateway-nginx:
+    image: api-gateway-nginx
+    build: .
+    ports:
+      - "80:80"
+    networks:
+      - api-gateway-nginx
+ 
+networks:
+  api-gateway-nginx:
+    driver: bridge
+    
